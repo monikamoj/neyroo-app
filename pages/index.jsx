@@ -1,39 +1,42 @@
-import Image from "next/image";
 import styled from "styled-components";
 import Head from "next/head";
 import { NavBar } from "../src/components/Nav/NavBar";
 import { useState } from "react";
 import ReactPlayer from "react-player";
+import Header from "../src/components/Header/Header";
+import { LogoImage } from "../src/components/Header/Logo";
 
 export const Home = () => {
   const [isPlaying, setIsPlaying] = useState(false);
+  const [isActive, setIsActive] = useState(false);
+
+  function toggle() {
+    setIsActive(!isActive);
+  }
 
   return (
     <>
       <Head>
         <title>Corporate Campus Configurator</title>
       </Head>
-      <div className="logo">
-        <span>
-          <Image
-            src="/images/NEYROO-Signatur-Weiß.png"
-            alt="Neyroo Logo"
-            width={175}
-            height={45}
-          />
-        </span>
-        <NavBar />
-        <h1>CORPORATE CAMPUS CONFIGURATOR</h1>
-      </div>
+      <LogoImage />
+      <NavBar />
+      <h1>CORPORATE CAMPUS CONFIGURATOR</h1>
       <StyledVideo>
-        <ReactPlayer
-          className="reactplayer"
-          url="https://www.youtube.com/watch?v=xJL-s9dq7V0"
-          width="15%"
-          height="60px"
-          playIcon={<button>Play</button>}
-          playing={isPlaying}
-        />
+        <img onClick={toggle} src="/images/player.png" alt="" width="50" />
+        {isActive ? (
+          <>
+            <ReactPlayer
+              url="https://www.youtube.com/watch?v=xJL-s9dq7V0"
+              width="100%"
+              height="150px"
+              playing={isPlaying}
+            />
+            <button onClick={() => setIsPlaying(!isPlaying)}>play/stop </button>{" "}
+          </>
+        ) : (
+          ""
+        )}
       </StyledVideo>
       <StyledText>
         Die weltweit effektivste Plattform für virtuellen Vertrieb, Marketing
@@ -43,10 +46,6 @@ export const Home = () => {
     </>
   );
 };
-
-const StyledImage = styled(Image)`
-  margin-left: 0;
-`;
 
 const StyledVideo = styled.section`
   position: relative;

@@ -11,15 +11,9 @@ export const GlobalStyle = createGlobalStyle`
     background-image: url("./images/App Titel clean.001.png");
     margin-left: 1rem;
     margin-right: 1rem;
-    
+    margin-top: 2rem;
+    padding-left: 1rem;
   }
-  .logo {
-  height: 10em;
-  margin-left: 1.5rem;
-  margin-right: 1.5rem;
-  margin-top: 2rem;
-
-}
 
 h1 {
   margin: auto;
@@ -32,9 +26,10 @@ h2 {
   color: #ED6D10;
   font-family: "Montserrat", sans-serif; 
 }
-.reactplayer {
+
+img {
   display: flex;
   margin: auto;
+  width: 9vh;
 }
-
 `;
