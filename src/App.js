@@ -1,4 +1,4 @@
-/*import React from "react";
+import React from "react";
 
 export default function App() {
   return (
@@ -7,4 +7,4 @@ export default function App() {
       App
     </div>
   );
-}*/
+}

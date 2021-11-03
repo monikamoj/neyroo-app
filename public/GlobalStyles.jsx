@@ -8,12 +8,22 @@ export const GlobalStyle = createGlobalStyle`
   }*/
 
   body{
-    background-image: url("./images/App Titel clean.001.png");
+    background-image: url("./images/Campus_Verlauf.png");
     margin-left: 1rem;
     margin-right: 1rem;
     margin-top: 2rem;
     padding-left: 1rem;
+
+    @media (max-width: 768px) {
+      background-image: url("./images/Campus_Verlauf_mobile.png");
+  
   }
+
+  @media (max-width: 1439px) {
+      background-image: url("./images/Campus_Verlauf_big.png");
+     
+  }
+}
 
 h1 {
   margin: auto;
@@ -32,4 +42,5 @@ img {
   margin: auto;
   width: 9vh;
 }
+
 `;
