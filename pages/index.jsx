@@ -27,7 +27,6 @@ export const Home = () => {
             playing={isPlaying}
           />
         </>
-        )
       </StyledVideo>
       <StyledText>
         Die weltweit effektivste Plattform für virtuellen Vertrieb, Marketing
