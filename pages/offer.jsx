@@ -11,6 +11,7 @@ const Offer = () => {
       <LogoImage />
       <NavBar />
       <h2>Ausgewählte Module</h2>
+     
     </>
   );
 };

@@ -47,11 +47,9 @@ const StyledText = styled.a`
   display: flex;
   font-family: "Montserrat", sans-serif;
   font-weight: 500;
-  color: #ff7b00;
+  color: var(--color-text-signal);
   font-size: 3vh;
-  margin-top: 9rem;
-  margin-left: 2rem;
-  margin-right: 2rem;
+  margin-top: 5rem;
 `;
 
 export default Home;

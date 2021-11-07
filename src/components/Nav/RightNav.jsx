@@ -35,7 +35,8 @@ const Ul = styled.ul`
   list-style: none;
   display: flex;
   flex-flow: row nowrap;
-  color: #ff7b00;
+  color: var(--color-button);
+  font-size: 2vh;
 
   li {
     padding: 10px;
@@ -43,7 +44,7 @@ const Ul = styled.ul`
   }
 
   a {
-    color: #ff7b00;
+    color: var(--color-text-signal);
     text-decoration: none;
     list-style-type: none;
   }
@@ -56,7 +57,7 @@ const Ul = styled.ul`
     top: 0;
     right: 0;
     height: 100vh;
-    width: 145px;
+    width: 185px;
     padding-top: 0.5rem;
     padding-left: 1rem;
     transition: transform 0.4s ease-in-out;

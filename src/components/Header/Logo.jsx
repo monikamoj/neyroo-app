@@ -4,7 +4,7 @@ import styled from "styled-components";
 
 export const LogoImage = () => {
   return (
-    <>
+  
     <StyledImage
       src="/images/NEYROO-Signatur-Weiß.png"
       alt="Neyroo Logo"
@@ -12,7 +12,7 @@ export const LogoImage = () => {
       height={45}
       alt="Logo Neyroo"
     />
-    </>
+  
   );
 };
 
