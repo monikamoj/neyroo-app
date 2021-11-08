@@ -22,7 +22,7 @@ export const Home = () => {
           <ReactPlayer
             url="https://www.youtube.com/watch?v=xJL-s9dq7V0"
             width="100%"
-            height="180px"
+            height="230px"
             controls={true}
             playing={isPlaying}
           />
@@ -40,7 +40,7 @@ export const Home = () => {
 const StyledVideo = styled.section`
   padding-top: 25%;
   margin: auto;
-  margin-top: 3rem;
+  margin-top: 1rem;
 `;
 
 const StyledText = styled.a`

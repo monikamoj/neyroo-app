@@ -119,24 +119,24 @@ export default function ContactUs() {
             setEmail(e.target.value);
           }}
         />
-        {errors?.email && <StyledError>Email Feld muss befüllt sein.</StyledError>}
+        {errors?.email && (
+          <StyledError>Email Feld muss befüllt sein.</StyledError>
+        )}
 
-        <StyledLabel
-            htmlFor="subject"
-          >
-            Betreff<Star>*</Star>
-          </StyledLabel>
-          <input
-            type="text"
-            name="subject"
-            value={subject}
-            onChange={(e) => {
-              setSubject(e.target.value);
-            }}
-          />
-          {errors?.subject && (
-            <StyledError>Betreff Feld muss befüllt sein.</StyledError>
-          )}
+        <StyledLabel htmlFor="subject">
+          Betreff<Star>*</Star>
+        </StyledLabel>
+        <input
+          type="text"
+          name="subject"
+          value={subject}
+          onChange={(e) => {
+            setSubject(e.target.value);
+          }}
+        />
+        {errors?.subject && (
+          <StyledError>Betreff Feld muss befüllt sein.</StyledError>
+        )}
 
         <StyledLabel htmlFor="message">
           Nachricht<Star>*</Star>
