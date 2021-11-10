@@ -1,10 +1,10 @@
 import Head from "next/head";
 import { LogoImage } from "../src/components/Header/Logo";
 import { NavBar } from "../src/components/Nav/NavBar";
-import { ProductCard } from "../src/components/ProductCard";
-import { getProducts } from "./api/products/index";
+import styled from "styled-components";
+import ItemCart from "../src/components/Shopping/ItemCart";
 
-const Configurator = ({ products }) => {
+const Products = () => {
   return (
     <>
       <Head>
@@ -14,18 +14,20 @@ const Configurator = ({ products }) => {
       <NavBar />
       <h2>Corporate Campus Configurator</h2>
       <h3>All Modules</h3>
-      <div>
-        {products.map((product) => (
-          <ProductCard key={product.id} product={product} />
-        ))}
-      </div>
+      <ItemCart />
     </>
   );
 };
 
-export default Configurator;
+export default Products;
 
-export async function getStaticProps() {
-  const products = await getProducts();
-  return { props: { products } };
-}
+
+
+const StyledArea = styled.li`
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  color: var(--color-text-normal);
+`;

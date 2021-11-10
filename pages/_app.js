@@ -4,10 +4,8 @@ import { Component } from "react";
 function MyApp({ Component, pageProps }) {
   return (
     <>
-    
-        <GlobalStyle />
-        <Component {...pageProps} />
-      
+      <GlobalStyle />
+      <Component {...pageProps} />
     </>
   );
 }
