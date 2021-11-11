@@ -1,7 +1,7 @@
 import Head from "next/head";
 import { LogoImage } from "../src/components/Header/Logo";
 import { NavBar } from "../src/components/Nav/NavBar";
-import ContactUs from "../src/components/Form/ExportForm";
+import ContactUs from "../src/components/Form/ContactUs";
 import styled from "styled-components";
 
 const Export = () => {

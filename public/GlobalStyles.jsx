@@ -53,6 +53,11 @@ h3 {
   font-family: "Montserrat", sans-serif; 
 }
 
+h4 {
+  position: grid;
+  justify-items: start;
+}
+
 img {
   display: flex;
   margin: auto;
@@ -82,5 +87,27 @@ button {
   border-radius: 5px;
   height: 32px;
   width: 120px;
+}
+
+
+button.add {
+  background-color: blue;
+  width: 1.5rem;
+}
+
+button.remove {
+  background-color: red;
+  width: 1.5rem;
+}
+
+button.badge {
+  background-color: red;
+  border: none;
+  color: #ffffff;
+  width: 1.5rem;
+}
+
+.text-right {
+  text-align: right;
 }
 `;

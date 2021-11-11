@@ -10,7 +10,6 @@ export const LogoImage = () => {
       alt="Neyroo Logo"
       width={175}
       height={45}
-      alt="Logo Neyroo"
     />
   
   );

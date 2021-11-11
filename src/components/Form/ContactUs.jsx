@@ -151,9 +151,9 @@ export default function ContactUs() {
         {errors?.message && (
           <StyledError>Nachricht Feld muss befüllt sein.</StyledError>
         )}
-        <ButtonWrapper>
+
         <button type="submit">{buttonText}</button>
-        </ButtonWrapper>
+
         <div>
           {showSuccessMessage && (
             <StyledSuccess>
@@ -194,14 +194,4 @@ const StyledError = styled.p`
 
 const StyledSuccess = styled.p`
   color: green;
-`;
-
-const ButtonWrapper = styled.button`
-  margin-top: 4rem;
-  margin-bottom: 4rem;
-  background-color: var(--color-button);
-  color: var(--color-text-normal);
-  border-radius: 5px;
-  height: 32px;
-  width: 120px;
 `;

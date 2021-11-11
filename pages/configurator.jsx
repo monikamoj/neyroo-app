@@ -2,9 +2,10 @@ import Head from "next/head";
 import { LogoImage } from "../src/components/Header/Logo";
 import { NavBar } from "../src/components/Nav/NavBar";
 import styled from "styled-components";
-import ItemCart from "../src/components/Shopping/ItemCart";
+import Products from "../src/components/Shopping/Products";
+import ShoppingCart from "../src/components/Shopping/ShoppingCart";
 
-const Products = () => {
+export const Configurator = (props) => {
   return (
     <>
       <Head>
@@ -14,20 +15,22 @@ const Products = () => {
       <NavBar />
       <h2>Corporate Campus Configurator</h2>
       <h3>All Modules</h3>
-      <ItemCart />
+      <Products
+        shoppingCart={props.shoppingCart}
+        setShoppingCart={props.setShoppingCart}
+      />
+      
     </>
   );
 };
 
-export default Products;
+export default Configurator;
 
-
-
-const StyledArea = styled.li`
+/*const StyledArea = styled.li`
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   font-family: "Montserrat", sans-serif;
   font-weight: 500;
   color: var(--color-text-normal);
-`;
+`;*/
