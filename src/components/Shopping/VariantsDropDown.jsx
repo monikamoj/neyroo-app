@@ -1,15 +1,22 @@
 import styled from "styled-components";
 import Select from "react-select";
 
+const euroFormatter = new Intl.NumberFormat("de-de", {
+  style: "currency",
+  currency: "EUR",
+});
+
 export const VariantsDropDown = ({
   variants,
   selectOption,
   setSelectOption,
 }) => {
-  const variants2 = variants.map((variant, index) => {
+  const options = variants.map((variant, index) => {
     return {
       value: index,
-      label: `${variant.price} € ${variant.duration} Tage `,
+      label: `${euroFormatter.format(
+        product.variants[variant].price
+      )} - {" "} ${variant.duration} Tage `,
     };
   });
 
@@ -17,7 +24,7 @@ export const VariantsDropDown = ({
     <DropDownList>
       <Select
         placeholder="Leistungsdauer"
-        options={variants2}
+        options={options}
         value={selectOption}
         onChange={setSelectOption}
       ></Select>
@@ -31,4 +38,3 @@ const DropDownList = styled.div`
   font-size: 12px;
   color: black;
 `;
-

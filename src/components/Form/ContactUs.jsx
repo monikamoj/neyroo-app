@@ -87,7 +87,6 @@ export default function ContactUs() {
       setMessage("");
       setSubject("");
     }
-    console.log(fullname, email, subject, message);
   };
   return (
     <main>

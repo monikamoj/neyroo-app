@@ -13,7 +13,7 @@ const Export = (props) => {
       <LogoImage />
       <NavBar />
       <h2>Angebot senden</h2>
-      <h3>Bereit für Deine eigene story?</h3>
+      <h3>Bereit für Deine eigene Story?</h3>
       <StyledPar>
         Leite Dein individuell generiertes Campus Paket weiter per Email.
         Alternativ, kannst Du uns natürlich gerne direkt per Mail oder

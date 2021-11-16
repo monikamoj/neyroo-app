@@ -11,7 +11,6 @@ function MyApp({ Component, pageProps }) {
 
   const [selectOption, setSelectOption] = useState(null);
 
-  console.log(shoppingCart);
   return (
     <>
       <GlobalStyle />

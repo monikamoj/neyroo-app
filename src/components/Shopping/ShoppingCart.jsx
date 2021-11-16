@@ -3,6 +3,11 @@ import data from "../../../data/products.json";
 import styled from "styled-components";
 import Image from "next/dist/client/image";
 
+const euroFormatter = new Intl.NumberFormat("de-de", {
+  style: "currency",
+  currency: "EUR",
+});
+
 export const ShoppingCart = (props) => {
   return props.shoppingCart.map(({ id, variant }) => {
     const product = data.find((product) => id === product.id);
@@ -11,7 +16,7 @@ export const ShoppingCart = (props) => {
         <h4>{product.name}</h4>
         <p>{product.description}</p>
         <p>
-          {product.variants[variant].price} € - {" "}
+          {euroFormatter.format(product.variants[variant].price)} -{" "}
           {product.variants[variant].duration} Tage
         </p>
       </StyledCart>
