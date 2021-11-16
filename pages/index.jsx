@@ -40,16 +40,18 @@ export const Home = () => {
 const StyledVideo = styled.section`
   padding-top: 25%;
   margin: auto;
-  margin-top: 1rem;
+  margin-bottom: 2rem;
 `;
 
 const StyledText = styled.a`
   display: flex;
+  text-align: justify;
+  align-items: center;
   font-family: "Montserrat", sans-serif;
   font-weight: 500;
   color: var(--color-text-signal);
   font-size: 3vh;
-  margin-top: 5rem;
+  margin-top: 3rem;
 `;
 
 export default Home;

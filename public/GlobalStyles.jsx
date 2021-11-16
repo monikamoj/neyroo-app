@@ -33,9 +33,14 @@ export const GlobalStyle = createGlobalStyle`
 }
 
 h1 {
-  margin: auto;
+  display: flex;
+  text-align: center;
+  align-items: center;
+  letter-spacing: 0.1rem;
+  font-size: 27px;
   color: var(--color-text-signal);
-  font-family: "Montserrat", sans-serif; 
+  font-family: "Montserrat", sans-serif;
+  font-size: 33px;
 }
 
 h2 {
@@ -54,15 +59,14 @@ h3 {
 }
 
 h4 {
-  position: grid;
-  justify-items: start;
+  margin-top: 0;
 }
 
-img {
+/*img {
   display: flex;
   margin: auto;
   width: 9vh;
-}
+}*/
 
 input[type="text"],
 input[type="email"] {
@@ -81,33 +85,11 @@ form {
 
 button {
   margin-top: 4rem;
-  margin-bottom: 4rem;
+  margin-bottom: 1rem;
   background-color: var(--color-button);
   color: var(--color-text-normal);
   border-radius: 5px;
   height: 32px;
-  width: 120px;
-}
-
-
-button.add {
-  background-color: blue;
-  width: 1.5rem;
-}
-
-button.remove {
-  background-color: red;
-  width: 1.5rem;
-}
-
-button.badge {
-  background-color: red;
-  border: none;
-  color: #ffffff;
-  width: 1.5rem;
-}
-
-.text-right {
-  text-align: right;
+  width: 100%;
 }
 `;

@@ -122,14 +122,5 @@
         "duration": 365
       }
     ]
-  },
-
-  {
-    "id": 6,
-    "name": "Support",
-    "description": "Telefonische Betreuung Mo-Fr 8-17 Uhr",
-    "image": "/images/ModuleFoto.png",
-    "price": 750,
-    "duration": 30
   }
 ]

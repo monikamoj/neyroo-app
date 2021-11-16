@@ -4,13 +4,19 @@ import styled from "styled-components";
 import Image from "next/dist/client/image";
 
 export const ShoppingCart = (props) => {
-  return data
-    .filter(({ id }) => props.shoppingCart.includes(id))
-    .map(({ id, name }) => (
+  return props.shoppingCart.map(({ id, variant }) => {
+    const product = data.find((product) => id === product.id);
+    return (
       <StyledCart key={id}>
-        <h4>{name}</h4>
+        <h4>{product.name}</h4>
+        <p>{product.description}</p>
+        <p>
+          {product.variants[variant].price} € - {" "}
+          {product.variants[variant].duration} Tage
+        </p>
       </StyledCart>
-    ));
+    );
+  });
 };
 
 export default ShoppingCart;

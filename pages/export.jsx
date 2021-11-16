@@ -4,7 +4,7 @@ import { NavBar } from "../src/components/Nav/NavBar";
 import ContactUs from "../src/components/Form/ContactUs";
 import styled from "styled-components";
 
-const Export = () => {
+const Export = (props) => {
   return (
     <>
       <Head>
@@ -19,7 +19,10 @@ const Export = () => {
         Alternativ, kannst Du uns natürlich gerne direkt per Mail oder
         telefonisch kontaktieren.
       </StyledPar>
-      <ContactUs />
+      <ContactUs
+        shoppingCart={props.shoppingCart}
+        setShoppingCart={props.setShoppingCart}
+      />
       <StyledPar>
         Lass uns direkt über dein Angebot sprechen: 0221 650 327-12
       </StyledPar>
