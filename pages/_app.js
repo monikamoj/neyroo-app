@@ -1,7 +1,7 @@
 import { GlobalStyle } from "../public/GlobalStyles";
 import { Component } from "react";
 import { useState } from "react";
-import { useLocalStorageState } from "../src/components/Shopping/utils/localstorage";
+import { useLocalStorageState } from "../utils/localstorage";
 
 function MyApp({ Component, pageProps }) {
   const [shoppingCart, setShoppingCart, removeItem] = useLocalStorageState(
