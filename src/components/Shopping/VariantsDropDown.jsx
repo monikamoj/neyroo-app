@@ -1,9 +1,11 @@
-import { useState } from "react";
 import styled from "styled-components";
 import Select from "react-select";
 
-export const VariantsDropDown = ({ variants, selectOption, setSelectOption }) => {
-
+export const VariantsDropDown = ({
+  variants,
+  selectOption,
+  setSelectOption,
+}) => {
   const variants2 = variants.map((variant, index) => {
     return {
       value: index,
@@ -30,6 +32,3 @@ const DropDownList = styled.div`
   color: black;
 `;
 
-const MenuItem = styled.li``;
-
-const InputLabel = styled.li``;

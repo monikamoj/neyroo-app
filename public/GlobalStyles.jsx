@@ -62,12 +62,6 @@ h4 {
   margin-top: 0;
 }
 
-/*img {
-  display: flex;
-  margin: auto;
-  width: 9vh;
-}*/
-
 input[type="text"],
 input[type="email"] {
   display: grid;

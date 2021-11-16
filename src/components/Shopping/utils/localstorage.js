@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+
 export const useLocalStorageState = (key, defaultValue) => {
   const [value, setValue] = useState(defaultValue);
   useEffect(() => {
@@ -30,12 +31,12 @@ export const useLocalStorageState = (key, defaultValue) => {
       }
     }
   }, [value, key]);
-    
-    const removeValue = (index) => {
-      const front = value.slice(0, index);
-      const back = value.slice(index + 1, value.length - index + 1);
-      setGiftList([...front, ...back]);
-    };
-    
+
+  const removeValue = (index) => {
+    const front = value.slice(0, index);
+    const back = value.slice(index + 1, value.length - index + 1);
+    setGiftList([...front, ...back]);
+  };
+
   return [value, setValue, removeValue];
 };

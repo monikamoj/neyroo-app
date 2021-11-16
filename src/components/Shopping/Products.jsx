@@ -3,7 +3,6 @@ import data from "../../../data/products.json";
 import styled from "styled-components";
 import Image from "next/dist/client/image";
 import { VariantsDropDown } from "./VariantsDropDown";
-import Select from "react-select";
 
 export const Products = (props) => {
   const addProduct = (id, variant) => {
@@ -12,21 +11,26 @@ export const Products = (props) => {
 
   const [selectOption, setSelectOption] = useState(null);
 
-  return data.map(
-    ({ id, image, name, description, variants }) => (
-      <StyledCart key={id}>
-        <StyledImage src={image} alt={name} width={145} height={115} />
-        <TextWrapper>
-          <h4>{name}</h4>
-          <StyledText>{description}</StyledText>
-        </TextWrapper>
-        <VariantsDropDown key={id} variants={variants} selectOption={selectOption} setSelectOption={setSelectOption} />
-        <StyledVariants>
-          <button onClick={() => addProduct(id, selectOption.value)}>Auswählen</button>
-        </StyledVariants>
-      </StyledCart>
-    )
-  );
+  return data.map(({ id, image, name, description, variants }) => (
+    <StyledCart key={id}>
+      <StyledImage src={image} alt={name} width={145} height={115} />
+      <TextWrapper>
+        <h4>{name}</h4>
+        <StyledText>{description}</StyledText>
+      </TextWrapper>
+      <VariantsDropDown
+        key={id}
+        variants={variants}
+        selectOption={selectOption}
+        setSelectOption={setSelectOption}
+      />
+      <StyledVariants>
+        <button onClick={() => addProduct(id, selectOption.value)}>
+          Auswählen
+        </button>
+      </StyledVariants>
+    </StyledCart>
+  ));
 };
 
 export default Products;
