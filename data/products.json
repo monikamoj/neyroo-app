@@ -6,19 +6,19 @@
     "image": "/images/ModuleFoto.png",
     "variants": [
       {
-        "price": 7.499,
+        "price": 7499,
         "duration": 30
       },
       {
-        "price": 11.999,
+        "price": 11999,
         "duration": 90
       },
       {
-        "price": 14.999,
+        "price": 14999,
         "duration": 180
       },
       {
-        "price": 23.999,
+        "price": 23999,
         "duration": 365
       }
     ]
@@ -31,19 +31,19 @@
     "image": "/images/ModuleFoto.png",
     "variants": [
       {
-        "price": 2.499,
+        "price": 2499,
         "duration": 30
       },
       {
-        "price": 3.499,
+        "price": 3499,
         "duration": 90
       },
       {
-        "price": 3.999,
+        "price": 3999,
         "duration": 180
       },
       {
-        "price": 4.999,
+        "price": 4999,
         "duration": 365
       }
     ]
@@ -77,7 +77,7 @@
   {
     "id": 4,
     "name": "Academy",
-    "description": " QuickNavigation, Bis zu 5 Chats, 4 Areas, Terminvereibarung, E-Learning Widget, Masterclasses, Bibliothek, Book your lessons, 2x Videowall, 5 iFrame Einbindungen, 5x Social Media Link, 5x External Link.",
+    "description": "QuickNavigation, Bis zu 5 Chats, 4 Areas, Terminvereibarung, E-Learning Widget, Masterclasses, Bibliothek, Book your lessons, 2x Videowall, 5 iFrame Einbindungen, 5x Social Media Link, 5x External Link.",
     "image": "/images/ModuleFoto.png",
     "variants": [
       {
@@ -85,15 +85,15 @@
         "duration": 30
       },
       {
-        "price": 1.199,
+        "price": 1199,
         "duration": 90
       },
       {
-        "price": 1.499,
+        "price": 1499,
         "duration": 180
       },
       {
-        "price": 2.499,
+        "price": 2499,
         "duration": 365
       }
     ]
@@ -102,23 +102,23 @@
   {
     "id": 5,
     "name": "Exhibition",
-    "description": " Hosting.",
+    "description": "Hosting.",
     "image": "/images/ModuleFoto.png",
     "variants": [
       {
-        "price": 1.499,
+        "price": 1499,
         "duration": 30
       },
       {
-        "price": 2.399,
+        "price": 2399,
         "duration": 90
       },
       {
-        "price": 2.999,
+        "price": 2999,
         "duration": 180
       },
       {
-        "price": 4.999,
+        "price": 4999,
         "duration": 365
       }
     ]
