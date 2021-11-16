@@ -1,8 +1,11 @@
 import Head from "next/head";
 import { LogoImage } from "../src/components/Header/Logo";
 import { NavBar } from "../src/components/Nav/NavBar";
+import ShoppingCart from "../src/components/Shopping/ShoppingCart";
 
-const Offer = () => {
+
+export const Offer = (props) => {
+
   return (
     <>
       <Head>
@@ -11,6 +14,12 @@ const Offer = () => {
       <LogoImage />
       <NavBar />
       <h2>Ausgewählte Module</h2>
+      <div>
+        <ShoppingCart
+          shoppingCart={props.shoppingCart}
+          setShoppingCart={props.setShoppingCart}
+        />
+      </div>
     </>
   );
 };

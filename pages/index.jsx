@@ -22,7 +22,7 @@ export const Home = () => {
           <ReactPlayer
             url="https://www.youtube.com/watch?v=xJL-s9dq7V0"
             width="100%"
-            height="180px"
+            height="230px"
             controls={true}
             playing={isPlaying}
           />
@@ -40,18 +40,18 @@ export const Home = () => {
 const StyledVideo = styled.section`
   padding-top: 25%;
   margin: auto;
-  margin-top: 3rem;
+  margin-bottom: 2rem;
 `;
 
 const StyledText = styled.a`
   display: flex;
+  text-align: justify;
+  align-items: center;
   font-family: "Montserrat", sans-serif;
   font-weight: 500;
-  color: #ff7b00;
+  color: var(--color-text-signal);
   font-size: 3vh;
-  margin-top: 9rem;
-  margin-left: 2rem;
-  margin-right: 2rem;
+  margin-top: 3rem;
 `;
 
 export default Home;

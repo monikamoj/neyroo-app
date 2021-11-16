@@ -1,0 +1,126 @@
+[
+  {
+    "id": 1,
+    "name": "Groundfloor",
+    "description": "Hosting, Server, Backend, Registrierung, Login, Tracking, Rollen-Rechte System, 360 Grad ready, E-mail Client, AVV Vertrag, Datenschützbestimmungen, DSGVO Workshop.",
+    "image": "/images/ModuleFoto.png",
+    "variants": [
+      {
+        "price": 7.499,
+        "duration": 30
+      },
+      {
+        "price": 11.999,
+        "duration": 90
+      },
+      {
+        "price": 14.999,
+        "duration": 180
+      },
+      {
+        "price": 23.999,
+        "duration": 365
+      }
+    ]
+  },
+
+  {
+    "id": 2,
+    "name": "EventHall",
+    "description": "QuickNavigation, Agenda mit Bookingtool, Bis zu 5 Chats, 3 Areas, Mediathek, 1x Umfrage, Feedbackwall, Videowall, WYSIWYG-Editor, 1x Livestream, 3 iFrame Einbindungen, 5x Social Media Link, 5x External Link.",
+    "image": "/images/ModuleFoto.png",
+    "variants": [
+      {
+        "price": 2.499,
+        "duration": 30
+      },
+      {
+        "price": 3.499,
+        "duration": 90
+      },
+      {
+        "price": 3.999,
+        "duration": 180
+      },
+      {
+        "price": 4.999,
+        "duration": 365
+      }
+    ]
+  },
+
+  {
+    "id": 3,
+    "name": "Showroom",
+    "description": "QuickNavigation, Bis zu 3 Chats, 2 Areas, Terminvereinbarung, 3D Viewer, Mediathek, Videowall, WYSIWYG-Editor, 3 iFrame Einbindungen, 5x Social Media Link,5x External Link. ",
+    "image": "/images/ModuleFoto.png",
+    "variants": [
+      {
+        "price": 399,
+        "duration": 30
+      },
+      {
+        "price": 599,
+        "duration": 90
+      },
+      {
+        "price": 799,
+        "duration": 180
+      },
+      {
+        "price": 999,
+        "duration": 365
+      }
+    ]
+  },
+
+  {
+    "id": 4,
+    "name": "Academy",
+    "description": " QuickNavigation, Bis zu 5 Chats, 4 Areas, Terminvereibarung, E-Learning Widget, Masterclasses, Bibliothek, Book your lessons, 2x Videowall, 5 iFrame Einbindungen, 5x Social Media Link, 5x External Link.",
+    "image": "/images/ModuleFoto.png",
+    "variants": [
+      {
+        "price": 799,
+        "duration": 30
+      },
+      {
+        "price": 1.199,
+        "duration": 90
+      },
+      {
+        "price": 1.499,
+        "duration": 180
+      },
+      {
+        "price": 2.499,
+        "duration": 365
+      }
+    ]
+  },
+
+  {
+    "id": 5,
+    "name": "Exhibition",
+    "description": " Hosting.",
+    "image": "/images/ModuleFoto.png",
+    "variants": [
+      {
+        "price": 1.499,
+        "duration": 30
+      },
+      {
+        "price": 2.399,
+        "duration": 90
+      },
+      {
+        "price": 2.999,
+        "duration": 180
+      },
+      {
+        "price": 4.999,
+        "duration": 365
+      }
+    ]
+  }
+]
