@@ -14,16 +14,15 @@ export const VariantsDropDown = ({
   const options = variants.map((variant, index) => {
     return {
       value: index,
-      label: `${euroFormatter.format(variant.price)} ${variant.duration} Tage `,
+      label: `${euroFormatter.format(variant.price)} ${variant.duration} Tage`,
     };
   });
-
   return (
     <DropDownList>
       <Select
         placeholder="Leistungsdauer"
         options={options}
-        value={selectOption}
+        defaultValue={selectOption}
         onChange={setSelectOption}
       ></Select>
     </DropDownList>

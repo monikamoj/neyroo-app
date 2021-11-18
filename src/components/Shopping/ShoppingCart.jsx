@@ -19,6 +19,10 @@ export const ShoppingCart = (props) => {
           {euroFormatter.format(product.variants[variant].price)} -{" "}
           {product.variants[variant].duration} Tage
         </p>
+
+        <StyledRemove>
+          <button onClick={() => handleRemoveProduct(product)}>Remove</button>
+        </StyledRemove>
       </StyledCart>
     );
   });
@@ -36,3 +40,35 @@ const StyledCart = styled.div`
   font-weight: 500;
   color: var(--color-text-normal);
 `;
+
+const StyledRemove = styled.div`
+  width: 30%;
+`;
+
+/*
+const totalPrice = cartItems.reduce(
+  (price, item) => price + item.quantity * item.price,
+  0
+);
+
+const handleRemoveProduct = (product) => {
+  const ProductExist = product.find((item) => item.id === product.id);
+  if (ProductExist.quantity === 1) {
+    setRemoveProduct(product.filter((item) => item.id !== product.id));
+  } else {
+    setRemoveProduct(
+      product.map((item) =>
+        item.id === product.id
+          ? { ...ProductExist, quantity: ProductExist.quantity - 1 }
+          : item
+      )
+    );
+  }
+};
+
+<div>
+          {item.quantity} * {item.price}
+        </div>
+        <div>{totalPrice}</div>
+
+*/

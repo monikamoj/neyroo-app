@@ -4,12 +4,12 @@ import { useState } from "react";
 import { useLocalStorageState } from "../utils/localstorage";
 
 function MyApp({ Component, pageProps }) {
-  const [shoppingCart, setShoppingCart, removeItem] = useLocalStorageState(
+  const [shoppingCart, setShoppingCart] = useLocalStorageState(
     "shoppingCart",
     []
   );
 
-  const [selectOption, setSelectOption] = useState(null);
+  const [selectOption, setSelectOption] = useState(null);  
 
   return (
     <>
@@ -18,9 +18,8 @@ function MyApp({ Component, pageProps }) {
         {...pageProps}
         shoppingCart={shoppingCart}
         setShoppingCart={setShoppingCart}
-        selectedOption={selectOption}
-        setSelectedOption={setSelectOption}
-        removeItem={removeItem}
+        selectOption={selectOption}
+        setSelectOption={setSelectOption}
       />
     </>
   );
