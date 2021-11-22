@@ -38,7 +38,7 @@ export const Home = () => {
 };
 
 const StyledVideo = styled.section`
-  padding-top: 25%;
+  padding-top: 15%;
   margin: auto;
   margin-bottom: 2rem;
 `;
@@ -48,7 +48,7 @@ const StyledText = styled.a`
   text-align: justify;
   align-items: center;
   font-family: "Montserrat", sans-serif;
-  font-weight: 500;
+  font-weight: 545;
   color: var(--color-text-signal);
   font-size: 3vh;
   margin-top: 3rem;

@@ -14,17 +14,17 @@ export const Offer = (props) => {
       </Head>
       <LogoImage />
       <NavBar />
+      <h2>Ausgewählte Module</h2>
       <StyledDiv>
-        <h2>Ausgewählte Module</h2>
-        <span>Total Price: {total}</span>
+        <StyledSpan>Gesamt: {total}</StyledSpan>
+        <div>
+          <ShoppingCart
+            shoppingCart={props.shoppingCart}
+            setShoppingCart={props.setShoppingCart}
+            setTotal={setTotal}
+          />
+        </div>
       </StyledDiv>
-      <div>
-        <ShoppingCart
-          shoppingCart={props.shoppingCart}
-          setShoppingCart={props.setShoppingCart}
-          setTotal={setTotal}
-        />
-      </div>
     </>
   );
 };
@@ -32,7 +32,18 @@ export const Offer = (props) => {
 export default Offer;
 
 const StyledDiv = styled.div`
-  display: flex;
-  align-content: center;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
   color: var(--color-text-normal);
+  display: grid;
+  align-items: start;
+  grid-gap: 15px;
+`;
+
+const StyledSpan = styled.span`
+  display: grid;
+  justify-items: end;
+  font-family: "Montserrat", sans-serif;
+  color: var(--color-text-normal);
+  font-size: 20px;
 `;

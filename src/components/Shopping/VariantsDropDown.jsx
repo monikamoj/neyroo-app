@@ -32,6 +32,6 @@ export const VariantsDropDown = ({
 const DropDownList = styled.div`
   list-style: none;
   font-family: "Montserrat", sans-serif;
-  font-size: 12px;
+  font-size: 10px;
   color: black;
 `;

@@ -39,4 +39,5 @@ const StyledPar = styled.p`
   color: whitesmoke;
   font-size: 2vh;
   margin: auto;
+  margin-top: 1rem;
 `;

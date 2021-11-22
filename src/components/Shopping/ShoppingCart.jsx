@@ -1,7 +1,6 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import data from "../../../data/products.json";
 import styled from "styled-components";
-import Image from "next/dist/client/image";
 
 export const euroFormatter = new Intl.NumberFormat("de-de", {
   style: "currency",
@@ -26,38 +25,44 @@ export const ShoppingCart = (props) => {
   return props.shoppingCart.map(({ id, variant }, index) => {
     const product = data.find((product) => id === product.id);
     return (
-      <StyledCart key={id}>
-        <li>{product.name}</li>
+      <StyledCartOffer key={id}>
         <li>
-          {euroFormatter.format(product.variants[variant].price)} -{" "}
-          {product.variants[variant].duration} Tage
+          <li>{product.name}</li>
         </li>
-
+        <StyledLi2>
+          <li>
+            {euroFormatter.format(product.variants[variant].price)} -{" "}
+            {product.variants[variant].duration} Tage
+          </li>
+        </StyledLi2>
         <StyledRemove>
-          <button onClick={() => handleRemoveProduct(index)}>Remove</button>
+          <button onClick={() => handleRemoveProduct(index)}>Löschen</button>
         </StyledRemove>
-      </StyledCart>
+      </StyledCartOffer>
     );
   });
 };
 
 export default ShoppingCart;
 
-const StyledImage = styled(Image)`
-  display: grid;
-  justify-items: end;
+const StyledRemove = styled.div`
+  grid-column: 1/2;
+  grid-row: 2;
+  margin: left;
+  width: 50%;
 `;
 
-const StyledCart = styled.ul`
+const StyledCartOffer = styled.ul`
   display: grid;
+  grid-template-columns: 50% 50%;
+  grid-gap: 10px;
   list-style: none;
+  padding-left: 0;
   font-family: "Montserrat", sans-serif;
   font-weight: 500;
   color: var(--color-text-normal);
 `;
 
-
-const StyledRemove = styled.div`
-  grid-column: 1/2;
-  width: 30%;
+const StyledLi2 = styled.li`
+  justify-items: end;
 `;

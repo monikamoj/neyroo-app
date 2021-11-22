@@ -16,8 +16,7 @@ export const GlobalStyle = createGlobalStyle`
 
   body{
     background-image: url("./images/Campus_Verlauf.png");
-    margin-left: 1rem;
-    margin-right: 1rem;
+    margin: auto;
     margin-top: 2rem;
     padding-left: 1rem;
 
@@ -78,7 +77,7 @@ form {
 }
 
 button {
-  margin-top: 4rem;
+  margin-top: 2rem;
   margin-bottom: 1rem;
   background-color: var(--color-button);
   color: var(--color-text-normal);

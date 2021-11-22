@@ -9,7 +9,7 @@ function MyApp({ Component, pageProps }) {
     []
   );
 
-  const [selectOption, setSelectOption] = useState(null);  
+  const [selectOption, setSelectOption] = useState(null);
 
   return (
     <>
