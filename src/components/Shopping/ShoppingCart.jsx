@@ -8,15 +8,7 @@ export const euroFormatter = new Intl.NumberFormat("de-de", {
 });
 
 export const ShoppingCart = (props) => {
-  const totalPrice = props.shoppingCart.reduce((sumPrice, { id, variant }) => {
-    const product = data.find((product) => id === product.id);
-    return sumPrice + product.variants[variant].price;
-  }, 0);
-
-  useEffect(() => {
-    props.setTotal(euroFormatter.format(totalPrice));
-  }, [totalPrice]);
-
+  
   const handleRemoveProduct = (index) => {
     const shoppingCartCopy = [...props.shoppingCart];
     shoppingCartCopy.splice(index, 1);

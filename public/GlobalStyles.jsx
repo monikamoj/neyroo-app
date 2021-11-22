@@ -18,6 +18,7 @@ export const GlobalStyle = createGlobalStyle`
     background-image: url("./images/Campus_Verlauf.png");
     margin: auto;
     margin-top: 2rem;
+    margin-left: 1rem;
     padding-left: 1rem;
 
     @media (max-width: 768px) {
