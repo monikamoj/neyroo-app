@@ -11,8 +11,7 @@ export const Configurator = (props) => {
       </Head>
       <LogoImage />
       <NavBar />
-      <h2>Corporate Campus Configurator</h2>
-      <h3>All Modules</h3>
+      <h2>Campus Configurator</h2>
       <Products
         shoppingCart={props.shoppingCart}
         setShoppingCart={props.setShoppingCart}

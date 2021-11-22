@@ -39,6 +39,7 @@ const StyledCart = styled.div`
   font-weight: 500;
   color: var(--color-text-normal);
   display: grid;
+  grid-template-columns: 150px 55%;
   justify-content: start;
   justify-items: stretch;
   align-items: start;
@@ -51,7 +52,10 @@ const TextWrapper = styled.a`
 `;
 
 const StyledImage = styled(Image)`
+  align-items: flex-start;
   grid-column: 1/2;
+  max-width: 145px;
+  max-height: 115px;
 `;
 
 const StyledText = styled.p`
@@ -65,4 +69,5 @@ const StyledVariants = styled.ul`
   list-style: none;
   font-size: 15px;
   padding-left: 0;
+  margin-top: 0;
 `;
