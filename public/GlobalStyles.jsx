@@ -19,6 +19,7 @@ export const GlobalStyle = createGlobalStyle`
     margin: auto;
     margin-top: 2rem;
     margin-left: 1rem;
+    margin-right: 0.1rem;
     padding-left: 1rem;
 
     @media (max-width: 768px) {
@@ -86,4 +87,32 @@ button {
   height: 32px;
   width: 100%;
 }
+
+.Collapsible__trigger {
+  display: block;
+  font-weight: 400;
+  text-decoration: none;
+  position: relative;
+  border: 1px solid white;
+  padding: 10px;
+  background: $cyan;
+  color: white;
+
+
+  &:after {
+    content: '⌃';
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    display: block;
+    transition: transform 300ms;
+  }
+
+  &.is-open {
+    &:after {
+      transform: rotateZ(180deg);
+    }
+  }
+}
+
 `;
