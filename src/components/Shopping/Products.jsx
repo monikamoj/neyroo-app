@@ -11,11 +11,10 @@ export const Products = (props) => {
   const [isOpen, setIsOpen] = useState(true);
 
   return data.map(({ id, image, name, description, variants }) => (
-    <CollDiv>
+    <CollDiv key={id}>
       <Collapsible trigger={name} open={isOpen}>
         <p>
           <Product
-            key={id}
             image={image}
             description={description}
             addProduct={addProduct}

@@ -67,8 +67,9 @@ input[type="text"],
 input[type="email"] {
   display: grid;
   grid-column: 3/4;
-  margin-top: 1rem;
+  font-family: "Montserrat", sans-serif; 
   font-size: 2vh;
+  height: 3vh; 
 }
 
 form {

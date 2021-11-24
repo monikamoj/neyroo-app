@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import styled from "styled-components";
 
-export default function ContactUs() {
+export default function ContactUs(props) {
   const [fullname, setFullname] = useState("");
   const [email, setEmail] = useState("");
   const [subject, setSubject] = useState("");
@@ -57,6 +57,7 @@ export default function ContactUs() {
           fullname: fullname,
           subject: subject,
           message: message,
+          shoppingCart: props.shoppingCart,
         }),
         headers: {
           "Content-Type": "application/json",
@@ -150,21 +151,17 @@ export default function ContactUs() {
         {errors?.message && (
           <StyledError>Nachricht Feld muss befüllt sein.</StyledError>
         )}
-
         <button type="submit">{buttonText}</button>
-
-        <div>
-          {showSuccessMessage && (
-            <StyledSuccess>
-              Danke! Deine Nachricht wurde abgeschickt.
-            </StyledSuccess>
-          )}
-          {showFailureMessage && (
-            <StyledError>
-              Oops! Da ist etwas schief gelaufen. Versuche noch mal.
-            </StyledError>
-          )}
-        </div>
+        {showSuccessMessage && (
+          <StyledSuccess>
+            Danke! Deine Nachricht wurde abgeschickt.
+          </StyledSuccess>
+        )}
+        {showFailureMessage && (
+          <StyledError>
+            Oops! Da ist etwas schief gelaufen. Versuche noch mal.
+          </StyledError>
+        )}
       </form>
     </main>
   );
@@ -175,7 +172,8 @@ const Star = styled.span`
 `;
 
 const StyledLabel = styled.label`
-  color: whitesmoke;
+  grid-column: 1/2;
+  color: var(--color-text-normal);
   margin-top: 1rem;
   font-family: "Montserrat", sans-serif;
   font-size: 2vh;
@@ -184,13 +182,19 @@ const StyledLabel = styled.label`
 const StyledTextarea = styled.textarea`
   display: grid;
   grid-column: 3/4;
-  margin-top: 1em;
+  font-family: "Montserrat", sans-serif;
 `;
 
 const StyledError = styled.p`
+  grid-column: 1/2;
+  font-size: 12px;
   color: red;
+  font-family: "Montserrat", sans-serif;
 `;
 
 const StyledSuccess = styled.p`
-  color: green;
+  grid-column: 3/4;
+  font-size: 16px;
+  color: var(--color-text-normal);
+  font-family: "Montserrat", sans-serif;
 `;
