@@ -15,7 +15,6 @@ export const Product = (props) => {
         height={115}
       />
       <TextWrapper>
-        <h4>{props.name}</h4>
         <StyledText>{props.description}</StyledText>
       </TextWrapper>
       <VariantsDropDown
