@@ -1,10 +1,29 @@
 import sendgrid from "@sendgrid/mail";
+import data from "../../data/products.json";
 
 sendgrid.setApiKey(process.env.SENDGRID_API_KEY);
 
 async function sendEmail(req, res) {
   try {
     // console.log("REQ.BODY", req.body);
+    const shoppingCart = req.body.shoppingCart
+      .map(({ id, variant }, index) => {
+        const product = data.find((product) => id === product.id);
+        const currentVariant = product.variants[variant];
+        return `
+      <li>${product.name}: ${currentVariant.duration} Tage ${currentVariant.price} € </li>
+       `;
+      })
+      .join("");
+
+    const totalPrice = req.body.shoppingCart.reduce(
+      (sumPrice, { id, variant }) => {
+        const product = data.find((product) => id === product.id);
+        return sumPrice + product.variants[variant].price;
+      },
+      0
+    );
+
     await sendgrid.send({
       to: [`${req.body.email}`, "monika.moj74@googlemail.com"],
       from: {
@@ -34,6 +53,8 @@ async function sendEmail(req, res) {
               <div style="font-size: 16px;">
               <p>Message:</p>
               <p>${req.body.message}</p>
+              <ul>${shoppingCart}</ul>
+               <p>Gesamt: ${totalPrice} €</p>
               <br>
               </div>
               </body>
